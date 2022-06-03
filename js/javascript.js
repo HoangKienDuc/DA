@@ -1,5 +1,5 @@
 let array_1 = [{
-        question: "de1Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì?",
+        question: "Phần của đường bộ được sử dụng cho các phương tiện giao thông qua lại là gì?",
         image: "",
         answers: [
                 "Phần mặt đường và lề đường.",
@@ -266,7 +266,7 @@ let array_1 = [{
     },
 ];
 let array_2 = [{
-        question: "de2“Làn đường” là gì?",
+        question: "“Làn đường” là gì?",
         image: "",
         answers: [
             "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử dụng cho xe chạy.",
@@ -533,7 +533,7 @@ let array_2 = [{
     },
 ];
 let array_3 = [{
-        question: "de3“Làn đường” là gì?",
+        question: "“Làn đường” là gì?",
         image: "",
         answers: [
             "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử dụng cho xe chạy.",
@@ -798,7 +798,7 @@ let array_3 = [{
     },
 ];
 let array_4 = [{
-        question: "de4“Làn đường” là gì?",
+        question: "“Làn đường” là gì?",
         image: "",
         answers: [
             "Là một phần của phần đường xe chạy được chia theo chiều dọc của đường, sử dụng cho xe chạy.",
@@ -1063,7 +1063,7 @@ let array_4 = [{
     }
 ];
 let array_5 = [{
-        question: "de5“Dải phân cách” trên đường bộ gồm những loại nào?",
+        question: "“Dải phân cách” trên đường bộ gồm những loại nào?",
         image: "",
         answers: [
             "Dải phân cách gồm loại cố định và loại di động.",
@@ -1340,7 +1340,7 @@ let array_5 = [{
     },
 ];
 let array_6 = [{
-        question: "de6Người lái xe được hiểu như thế nào trong các khái niệm dưới đây?",
+        question: "Người lái xe được hiểu như thế nào trong các khái niệm dưới đây?",
         image: "",
         answers: [
             "Là người điều khiển xe cơ giới.",
@@ -1601,7 +1601,7 @@ let array_6 = [{
     },
 ];
 let array_7 = [{
-        question: "de7Hành vi vận chuyển đồ vật cồng kềnh bằng xe mô tô, xe gắn máy khi tham gia giao thông có được phép hay không?",
+        question: "Hành vi vận chuyển đồ vật cồng kềnh bằng xe mô tô, xe gắn máy khi tham gia giao thông có được phép hay không?",
         image: " ",
         answers: [
             "Không được vận chuyển.",
@@ -1871,7 +1871,7 @@ let array_7 = [{
 ];
 let array_8 = [{
 
-        question: "de8Khi gặp hiệu lệnh như dưới đây của cảnh sát giao thông thì người tham gia giao thông phải đi như thế nào là đúng quy tắc giao thông?",
+        question: "Khi gặp hiệu lệnh như dưới đây của cảnh sát giao thông thì người tham gia giao thông phải đi như thế nào là đúng quy tắc giao thông?",
         image: " https://hoclaixemoto.com/image200/45.jpg",
         answers: [
             "Người tham gia giao thông ở hướng đối diện cảnh sát giao thông được đi, các hướng khác cần phải dừng lại.",
