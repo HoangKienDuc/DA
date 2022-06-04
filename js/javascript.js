@@ -2166,16 +2166,24 @@ let html = '<div class="question-item d-none">' +
     '<div class="answer">' +
     '<ul class="checkbox-list">' +
     '<li id="no_1">' +
-    '<input type="radio" name="1" value="1"><span>1 - </span>' +
+    '<label for="button1">'+
+    '<input type="radio" name="1" value="1" id=button1><span>1 - </span>'+
+    '</label>'+
     '</li>' +
     '<li id="no_2">' +
-    '<input type="radio" name="1" value="2"><span>2 - </span>' +
+    '<label for="button2">'+
+    '<input type="radio" name="1" value="3" id=button2><span>2 - </span>'+
+    '</label>'+
     '</li>' +
     '<li id="no_3">' +
-    '<input type="radio" name="1" value="3"><span>3 - </span>' +
+    '<label for="button3">'+
+    '<input type="radio" name="1" value="3" id=button3><span>3 - </span>'+
+    '</label>'+
     '</li>' +
     '<li id="no_4">' +
-    '<input type="radio" name="1" value="4"><span>4 - </span>' +
+    '<label for="button4">'+
+    '<input type="radio" name="1" value="4" id=button4><span>4 - </span>'+
+    '</label>'+
     '</li>' +
     '</ul>' +
     '</div>';
