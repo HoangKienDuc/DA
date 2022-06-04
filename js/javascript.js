@@ -225,8 +225,8 @@ let array_1 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -236,7 +236,7 @@ let array_1 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -492,8 +492,8 @@ let array_2 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -503,7 +503,7 @@ let array_2 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -697,7 +697,7 @@ let array_3 = [{
         image: " https://hoclaixemoto.com/image200/122.jpg",
         answers: [
             "Biển 1.",
-            "Biển 2.",
+            "Biển 2."
             //16
         ]
     },
@@ -1829,8 +1829,8 @@ let array_7 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -1840,7 +1840,7 @@ let array_7 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -2097,8 +2097,8 @@ let array_8 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -2108,7 +2108,7 @@ let array_8 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -2166,24 +2166,24 @@ let html = '<div class="question-item d-none">' +
     '<div class="answer">' +
     '<ul class="checkbox-list">' +
     '<li id="no_1">' +
-    '<label for="button1">'+
-    '<input type="radio" name="1" value="1" id=button1><span>1 - </span>'+
-    '</label>'+
+    '<label>' +
+    '<input type="radio" name="1" value="1" id="button1"><span>1 - </span>' +
+    '</label>' +
     '</li>' +
     '<li id="no_2">' +
-    '<label for="button2">'+
-    '<input type="radio" name="1" value="3" id=button2><span>2 - </span>'+
-    '</label>'+
+    '<label>' +
+    '<input type="radio" name="1" value="3" id="button2"><span>2 - </span>' +
+    '</label>' +
     '</li>' +
     '<li id="no_3">' +
-    '<label for="button3">'+
-    '<input type="radio" name="1" value="3" id=button3><span>3 - </span>'+
-    '</label>'+
+    '<label>' +
+    '<input type="radio" name="1" value="3" id="button3"><span>3 - </span>' +
+    '</label>' +
     '</li>' +
     '<li id="no_4">' +
-    '<label for="button4">'+
-    '<input type="radio" name="1" value="4" id=button4><span>4 - </span>'+
-    '</label>'+
+    '<label>' +
+    '<input type="radio" name="1" value="4" id="button4"><span>4 - </span>' +
+    '</label>' +
     '</li>' +
     '</ul>' +
     '</div>';
@@ -2229,9 +2229,15 @@ function renderQuestion(id = 0, de = synthetic[0]) {
         container.lastChild.querySelector("#value-question").textContent = data.question;
         container.lastChild.querySelector("#no_1 span").textContent = "1 - " + data.answers[0];
         container.lastChild.querySelector("#no_2 span").textContent = "2 - " + data.answers[1];
-        container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
+
         container.lastChild.querySelector(".ordinal-question").textContent = "Câu " + current;
-        if (data.answers.length > 3) {
+        if (data.answers.length == 3) {
+            container.lastChild.querySelector("#no_3").style.display = "flex";
+            container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
+        }
+        if (data.answers.length == 4) {
+            container.lastChild.querySelector("#no_3").style.display = "flex";
+            container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
             container.lastChild.querySelector("#no_4").style.display = "flex";
             container.lastChild.querySelector("#no_4 span").textContent = "4 - " + data.answers[3];
         }
@@ -2250,7 +2256,7 @@ function renderQuestionPage(exam_number = 0) {
 
     let html = '<div class="left-container">' +
         '<div>' +
-        '<strong style="color: blue;">Câu Hỏi | Đề Số 1</strong>' +
+        '<strong style="color: blue;">Câu Hỏi | Đề Số ' + (exam_number + 1) + '</strong>' +
         '</div>' +
         '<ul id = "btn-list"class="btn-list">' +
         ' </ul>' +
@@ -2286,8 +2292,13 @@ function renderQuestionPage(exam_number = 0) {
     }
     document.getElementById("get-score-btn").addEventListener("click", () => {
         getScore();
-        alert("Điểm của bạn là : " + score);
+        if (score < 21) {
+            alert("Điểm của bạn là : " + score + " Bạn Thi Không Đậu");
+        }
 
+        if (score >= 21) {
+            alert("Điểm của bạn là : " + score + "Bạn Đã Vượt Qua Bài Lý Thuyết ");
+        }
     });
 }
 
