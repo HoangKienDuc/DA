@@ -225,8 +225,8 @@ let array_1 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -236,7 +236,7 @@ let array_1 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -492,8 +492,8 @@ let array_2 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -503,7 +503,7 @@ let array_2 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -697,7 +697,7 @@ let array_3 = [{
         image: " https://hoclaixemoto.com/image200/122.jpg",
         answers: [
             "Biển 1.",
-            "Biển 2.",
+            "Biển 2."
             //16
         ]
     },
@@ -1829,8 +1829,8 @@ let array_7 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -1840,7 +1840,7 @@ let array_7 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -2097,8 +2097,8 @@ let array_8 = [{
         image: "https://hoclaixemoto.com/image200/169.jpg ",
         answers: [
             "Mô tô.",
-            "Xe cứu thương.",
-            "Tông Nhau"
+            "Xe cứu thương."
+
 
             //22
         ]
@@ -2108,7 +2108,7 @@ let array_8 = [{
         image: "https://hoclaixemoto.com/image200/177.jpg ",
         answers: [
             "Đúng.",
-            " Không đúng.",
+
             " Sai"
 
             //23
@@ -2221,9 +2221,15 @@ function renderQuestion(id = 0, de = synthetic[0]) {
         container.lastChild.querySelector("#value-question").textContent = data.question;
         container.lastChild.querySelector("#no_1 span").textContent = "1 - " + data.answers[0];
         container.lastChild.querySelector("#no_2 span").textContent = "2 - " + data.answers[1];
-        container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
+
         container.lastChild.querySelector(".ordinal-question").textContent = "Câu " + current;
-        if (data.answers.length > 3) {
+        if (data.answers.length == 3) {
+            container.lastChild.querySelector("#no_3").style.display = "flex";
+            container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
+        }
+        if (data.answers.length == 4) {
+            container.lastChild.querySelector("#no_3").style.display = "flex";
+            container.lastChild.querySelector("#no_3 span").textContent = "3 - " + data.answers[2];
             container.lastChild.querySelector("#no_4").style.display = "flex";
             container.lastChild.querySelector("#no_4 span").textContent = "4 - " + data.answers[3];
         }
