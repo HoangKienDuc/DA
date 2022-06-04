@@ -2292,8 +2292,13 @@ function renderQuestionPage(exam_number = 0) {
     }
     document.getElementById("get-score-btn").addEventListener("click", () => {
         getScore();
-        alert("Điểm của bạn là : " + score);
+        if (score < 21) {
+            alert("Điểm của bạn là : " + score + " Bạn Thi Không Đậu");
+        }
 
+        if (score >= 21) {
+            alert("Điểm của bạn là : " + score + "Bạn Đã Vượt Qua Bài Lý Thuyết ");
+        }
     });
 }
 
